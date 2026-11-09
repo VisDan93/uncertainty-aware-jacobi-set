@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uncertainty-aware-jacobi-set"
+dynamic = ["version"]
+description = "Uncertainty-aware Jacobi set computation for pairs of scalar fields"
+authors = [{ name = "Daniel Kloetzl" }]
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+]
+
+[tool.setuptools]
+packages = ["uncertainty_aware_jacobi_set"]
+
+[tool.setuptools.dynamic]
+version = { attr = "uncertainty_aware_jacobi_set.__version__" }
